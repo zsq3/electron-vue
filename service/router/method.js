@@ -4,7 +4,7 @@ const { Op } = require('sequelize');
 
 
 
-const addLabel = async ctx => { //新增
+const addLabel = async ctx => { //新增  （图片上传可以用 koa-multer 中间件接收）
     let dataBuffer = Buffer.from(ctx.request.body.img, 'base64'); //new Buffer()已经弃用，改成Buffer.from
     let imgPath = 'D:/DataBase/images/'+new Date().getTime()+'.jpg';
     await fs.writeFile(imgPath, dataBuffer, err => {
