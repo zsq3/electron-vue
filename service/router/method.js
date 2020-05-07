@@ -62,7 +62,7 @@ const deleteLabel = async ctx => { //删除
 };
 
 
-const exportDB = async ctx => { //导出数据
+const exportDB = async ctx => { //导出数据   
     //let list = await Labels.findAll({raw:true});
     let list = ctx.request.body.list;
     let str="Black_Hair,Eyeglasses,Heavy_Makeup,Mouth_Slightly_Open,"+
@@ -84,7 +84,7 @@ const exportDB = async ctx => { //导出数据
 };
 
 
-// 坑点： 这里只能用export 而且另外一边还得用require，好奇怪, (exports 好像被脚手架环境 改写了似的)
+
 export {
     addLabel,
     findLabel,
